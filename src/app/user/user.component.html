@@ -1,0 +1,10 @@
+Welcome to user tab : {{$users| async | json}} 
+
+
+<table>
+	<tr ng-repeat="(key,value) in $users">
+		<td>{{key.name}}</td>
+		<td>{{value.name}}</td>
+	</tr>
+
+</table>

@@ -25,4 +25,6 @@ export class AuthenticationService {
           return res.access_token;
         }
         return null;
-  }
+  });
+ }
+}

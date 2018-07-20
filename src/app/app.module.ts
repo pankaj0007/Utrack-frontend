@@ -13,6 +13,7 @@ import {UserComponent} from './user/user.component';
 import {UserService} from './services/user.service';
 import {AuthenticationService} from './services/authentication.service';
 import {TOKEN_NAME} from './services/auth.constant';
+import {HttpClientService}  from './services/httpclient.service'
 
 
 export function authHttpServiceFactory(http: Http) {
@@ -42,7 +43,8 @@ export function authHttpServiceFactory(http: Http) {
   providers: [
     {provide: AuthHttp, useFactory: authHttpServiceFactory, deps: [Http]},
     AuthenticationService,
-    UserService
+    UserService,
+    HttpClientService
   ],
   bootstrap: [AppComponent]
 })
