@@ -14,7 +14,8 @@ import {UserService} from './services/user.service';
 import {AuthenticationService} from './services/authentication.service';
 import {TOKEN_NAME} from './services/auth.constant';
 import {HttpClientService}  from './services/httpclient.service';
-import { AuditlogComponent } from './auditlog/auditlog.component'
+import { AuditlogComponent } from './auditlog/auditlog.component';
+import { HomeComponent } from './home/home.component'
 
 
 export function authHttpServiceFactory(http: Http) {
@@ -33,7 +34,8 @@ export function authHttpServiceFactory(http: Http) {
     AppComponent,
     UserComponent,
     LoginComponent,
-    AuditlogComponent
+    AuditlogComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

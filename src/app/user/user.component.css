@@ -1,14 +1,27 @@
 table, td, th {
-    border: 1px solid black;
-     text-align: center;
+	border: 2px solid black;
+	text-align: center;
+	width: 15px;
+	height: 20px;
+	font-size: 15px;
+	align: center;
 }
 
 table {
-    border-collapse: collapse;
-    width: 50%;
+	border-collapse: collapse;
+	width: 30%;
 }
 
 th {
-    height: 5px;
-    align: center;
+	height: 5px;
+	align: center;
+}
+div{
+	padding-top : 20px;
+	padding-left: 60px;
+}
+
+h1{
+	padding-left: 30px;
+	padding-top : 80px;
 }

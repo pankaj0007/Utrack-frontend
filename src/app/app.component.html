@@ -1,7 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align: center">
-	<h1>Utrack Login</h1>
-	<br>
-</div>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" />
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-collapse"
+	id="head-navbar">
+	<h1>
+		<a class="navbar-brand">Utrack App</a>
+	</h1>
+	<ul class="nav navbar-nav" routerLinkActive="active">
+		<li class="nav-item"><a routerLink="/home"
+			routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+		<li class="nav-item"><a routerLink="/user"
+			routerLinkActive="active">User</a></li>
+		<li class="nav-item"><a routerLink="/log"
+			routerLinkActive="active">logs</a></li>
+	</ul>
+</nav>
 
- <router-outlet></router-outlet>
+<router-outlet></router-outlet>
