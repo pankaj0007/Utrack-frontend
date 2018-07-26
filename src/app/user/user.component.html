@@ -1,10 +1,23 @@
-Welcome to user tab : {{$users| async | json}} 
+<html>
+<div>
+	<h1>
+		<button on-click='navigatelog()'>log</button>
+	</h1>
+</div>
+<h1>User List</h1>
+<div>
+	<table border="1px solid black" align="left">
+		<tr>
+			<th>Name</th>
+			<th>Password</th>
+			<th>Role</th>
+		</tr>
+		<tr *ngFor="let user of $userlist">
+			<td>{{user.name}}</td>
+			<td>{{user.password}}</td>
+			<td>{{user.role.name}}</td>
+		</tr>
 
-
-<table>
-	<tr ng-repeat="(key,value) in $users">
-		<td>{{key.name}}</td>
-		<td>{{value.name}}</td>
-	</tr>
-
-</table>
+	</table>
+</div>
+</html>

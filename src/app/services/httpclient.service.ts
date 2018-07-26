@@ -11,4 +11,9 @@ export class HttpClientService {
   getUsers() {
       return this.http.get(BASE_URI.concat('/utrack/user')).map(res => res.json());     
     }
+  
+  getAuditLogs(){
+      console.log('getAuditLogs');
+      return this.http.get(BASE_URI.concat('/utrack/logs')).map(res => res.json());
+  }
 }

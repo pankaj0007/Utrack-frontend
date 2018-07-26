@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClientService}  from '../services/httpclient.service'
+import {Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -8,19 +9,21 @@ import {HttpClientService}  from '../services/httpclient.service'
 })
 export class UserComponent implements OnInit {
   $users;
+  $userlist;
   
-  constructor(private httpClient: HttpClientService) { }
+  constructor(private httpClient: HttpClientService,
+          private router: Router,
+          private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-      console.log('UserCompoenent ....');
       this.$users = this.httpClient.getUsers();
-      console.log('users : ', this.$users);
       this.$users.forEach(item=>{
-          console.log('name : ', item);
-          item.forEach(c=>{
-              console.log(c.name,' ', c.password, ' ', c.role);
-          });
+          this.$userlist= item;
       });
+  }
+  
+  navigatelog(){
+      this.router.navigate(['log']);
   }
 
 }

@@ -1,0 +1,24 @@
+<h1>Audit Logs</h1>
+<br>
+<br>
+<div>
+	<table border="1px solid black" align="left">
+	<tr>
+			<th>Entity Id</th>
+			<th>Action</th>
+			<th>Created Date</th>
+			<th>Entity Name</th>
+			<th>current Data</th>
+			<th>Previous Data</th>
+		</tr>
+		<tr *ngFor="let log of $logslist">
+			<td>{{log.entityId}}</td>
+			<td>{{log.action}}</td>
+			<td>{{log.createdDate}}</td>
+			<td>{{log.entityName}}</td>
+			<td>{{log.currentData}}</td>
+			<td>{{log.previousData}}</td>
+		</tr>
+
+	</table>
+</div>
